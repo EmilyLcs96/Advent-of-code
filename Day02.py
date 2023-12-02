@@ -19,14 +19,17 @@ for current_game in input_value:
         for color in pull:
             if "blue" in color and ValidGame == True:
                 if get_num(color) > maxBlue:
+                    print(f"Too many Blue Dice in {pull}! Current Game: {Game}")
                     ValidGame = False
             if "green" in color and ValidGame == True:
                 if get_num(color) > maxGreen:
+                    print(f"Too many Green Dice in {pull}! Current Game: {Game}")
                     ValidGame = False
             if "red" in color and ValidGame == True:
                 if get_num(color) > maxRed:
+                    print(f"Too many Red Dice in {pull}! Current Game: {Game}")
                     ValidGame = False
     if ValidGame == True:
         running_total += Game
-    print(f"Current Game: {Game}. Running total: {running_total}")
     ValidGame = True
+print(f"Current Game: {Game}. Running total: {running_total}")
